@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#17365D"/>
+  <!-- Dynamic Car Roofline Silhouette (White / Light Navy Highlight) -->
+  <path d="M12 31C15 24 21 20 30 20H41C47 20 51 24 54 31" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Integrated Double-Ended Mechanic Wrench Chassis in Dark Wine (#790D16) -->
+  <path d="M10 38C10 34.5 13 32 16.5 32C19.2 32 21.5 33.6 22.4 36H41.6C42.5 33.6 44.8 32 47.5 32C51 32 54 34.5 54 38C54 41.5 51 44 47.5 44C44.8 44 42.5 42.4 41.6 40H22.4C21.5 42.4 19.2 44 16.5 44C13 44 10 41.5 10 38Z" fill="#790D16" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="16.5" cy="38" r="2.5" fill="#FFFFFF"/>
+  <circle cx="47.5" cy="38" r="2.5" fill="#FFFFFF"/>
+</svg>
+

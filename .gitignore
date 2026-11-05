@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vercel
+.DS_Store
+"chapter 1 - V1.pdf"
+

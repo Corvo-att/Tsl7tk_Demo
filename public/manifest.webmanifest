@@ -1,0 +1,19 @@
+{
+  "name": "tsl7tk — Car Repair & Roadside Assistance",
+  "short_name": "tsl7tk",
+  "description": "Your car, taken care of. Egyptian automotive utility, spare parts locator, roadside SOS & Diagnostic DSS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17365D",
+  "theme_color": "#17365D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+@theme {
+  /* Strict Guardrail: Disable default Tailwind palette so ONLY tsl7tk tokens exist */
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-inherit: inherit;
+
+  /* Core Brand Palette (60 / 20 / 10 / 10 Rule) */
+  --color-brand-primary: #17365D;
+  --color-brand-accent: #790D16;
+  --color-surface-canvas: #F4F6F9;
+  --color-neutral-slate: #8A9AA6;
+  --color-neutral-charcoal: #1F2937;
+  --color-surface-pure: #FFFFFF;
+  --color-divider: #E5E7EB;
+  --color-white: #FFFFFF;
+
+  /* Docs & Investor Pitch Editorial Tokens (Harmonized with tsl7tk) */
+  --color-canvas: #F4F6F9;
+  --color-surface: #FFFFFF;
+  --color-ink: #17365D;
+  --color-slate: #43474E;
+  --color-muted: #74777F;
+  --color-hairline: #E5E7EB;
+  --color-subtle: #F4F6F9;
+  --color-accent: #790D16;
+  --color-positive: #2E7D32;
+
+  /* Semantic & Status Colors (§2) */
+  --color-status-success: #2E7D32;
+  --color-status-success-bg: #E8F5E9;
+  --color-status-warning: #E65100;
+  --color-status-star: #F59E0B;
+  --color-status-warning-bg: #FFF3E0;
+  --color-status-error: #BA1A1A;
+  --color-status-error-bg: #FDE8E8;
+
+  /* Extended M3 / System Tokens (from YAML front-matter) */
+  --color-surface: #f8f9ff;
+  --color-surface-dim: #d0dbed;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e6eeff;
+  --color-surface-container-high: #dee9fc;
+  --color-surface-container-highest: #d9e3f6;
+  --color-on-surface: #121c2a;
+  --color-on-surface-variant: #43474e;
+  --color-inverse-surface: #27313f;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-outline: #74777f;
+  --color-outline-variant: #c4c6cf;
+  --color-surface-tint: #435f89;
+  --color-primary: #002043;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #17365d;
+  --color-on-primary-container: #84a0cd;
+  --color-inverse-primary: #acc8f7;
+  --color-secondary: #aa3435;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fe716e;
+  --color-on-secondary-container: #700411;
+  --color-tertiary: #002705;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #003f0b;
+  --color-on-tertiary-container: #60af5e;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #d5e3ff;
+  --color-primary-fixed-dim: #acc8f7;
+  --color-on-primary-fixed: #001c3b;
+  --color-on-primary-fixed-variant: #2b486f;
+  --color-secondary-fixed: #ffdad7;
+  --color-secondary-fixed-dim: #ffb3af;
+  --color-on-secondary-fixed: #410005;
+  --color-on-secondary-fixed-variant: #891b20;
+  --color-tertiary-fixed: #a3f69c;
+  --color-tertiary-fixed-dim: #88d982;
+  --color-on-tertiary-fixed: #002204;
+  --color-on-tertiary-fixed-variant: #005312;
+  --color-background: #f8f9ff;
+  --color-on-background: #121c2a;
+  --color-surface-variant: #d9e3f6;
+
+  /* Font Stacks (§3) */
+  --font-display: "Plus Jakarta Sans", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+
+  /* Navy-Tinted Elevation Shadows (§4) */
+  --shadow-e1: 0px 4px 12px rgba(23, 54, 93, 0.08);
+  --shadow-e2: 0px 8px 24px rgba(23, 54, 93, 0.14);
+  --shadow-e3: 0px -4px 20px rgba(23, 54, 93, 0.10);
+
+  /* Border Radii (§4) */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* Base styles & Arabic font adjustments */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    color: #1F2937;
+    background-color: #F4F6F9;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html[lang="ar"] {
+    font-family: "IBM Plex Sans Arabic", "Inter", system-ui, sans-serif;
+  }
+}
+
+/* Strict Typographic Scale Utilities (§3 Table) */
+@utility text-display-brand {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+}
+
+@utility text-headline-lg {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+}
+
+@utility text-headline-md {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
+@utility text-headline-sm {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+@utility text-body-lg {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+@utility text-body-md {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+@utility text-body-sm {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+@utility text-label-lg {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+@utility text-label-md {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+@utility text-label-sm {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+}
+
+/* Slight breathing room for Arabic script line-heights */
+html[lang="ar"] .text-headline-lg { line-height: 36px; }
+html[lang="ar"] .text-headline-md { line-height: 30px; }
+html[lang="ar"] .text-headline-sm { line-height: 26px; }
+html[lang="ar"] .text-body-lg { line-height: 26px; }
+html[lang="ar"] .text-body-md { line-height: 22px; }
+html[lang="ar"] .text-label-lg { line-height: 20px; }
+
+/* Hide scrollbars on horizontal chip strips while preserving scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Leaflet map container overrides */
+.leaflet-container {
+  font-family: var(--font-body) !important;
+  z-index: 10;
+}
+
+/* Custom Range Slider for Docs ROI Simulator */
+input[type="range"].tsl7tk-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #E5E7EB;
+  height: 6px;
+  border-radius: 999px;
+  outline: none;
+}
+input[type="range"].tsl7tk-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #17365D;
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(23, 54, 93, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+input[type="range"].tsl7tk-range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #790D16;
+}
+
+
